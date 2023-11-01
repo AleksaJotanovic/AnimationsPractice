@@ -1,0 +1,22 @@
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <button type="button" class="btn btn-sm rounded-0 btn-primary" (click)="animate()">Animate</button>
+      <button type="button" class="btn btn-sm rounded-0 btn-info" (click)="shrink()">Shrink</button>
+      <hr>
+      <div class="w-25 h-50" [@divAnimate]="state" (@divAnimate.start)="animationStarted($event)" (@divAnimate.done)="animationFinished($event)"></div>
+      <hr>
+      <hr>
+      <div class="w-25 h-50" [@divShrink]="asterisk"></div>
+      <hr>
+      <div>
+        <input type="text" class="form-control form-control-sm rounded-5 shadow-sm" #input>
+        <button type="button" class="btn btn-sm btn-outline-success rounded-0 mt-2 mb-2" (click)="addItem(input.value); input.value = ''">Add Item</button>
+        <ul class="list-group">
+          <li class="list-group-item" *ngFor="let item of items" (click)="deleteItem(item)" [@list]>{{item}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div> -->
+<app-pipes></app-pipes>

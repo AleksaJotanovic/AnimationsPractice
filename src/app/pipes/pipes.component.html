@@ -1,0 +1,18 @@
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+			<input type="text" class="form-control form-control-sm rounded-0 shadow-sm w-25 mt-3 mb-2" [(ngModel)]="filterBy">
+			<button type="button" class="btn btn-sm btn-outline-primary rounded-0">Add Server</button>
+			<br><br>
+			<h1>Server Status: {{asyncOperation | async}}</h1>
+			<hr>
+			<ul class="list-group">
+				<li class="list-group-item" *ngFor="let server of servers | filter : filterBy : 'status'" [ngClass]="returnServerStatus(server)">
+					<strong>{{server.name | shortening : 6}}</strong>
+					/------/{{server.type | uppercase}}/------/{{server.startedWorking | date : 'fullDate' | uppercase}}
+					<span class="badge">{{server.status}}</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
